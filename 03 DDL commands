@@ -1,0 +1,38 @@
+DDL
+**** create table ****
+create table employee(
+employeeID INT,
+Fname Varchar(255),
+Lname varchar(255),
+Department varchar(255)
+);
+
+alter 
+ALTER TABLE Employees
+ADD Salary INT;
+
+RENAMING THE TABLES:
+Syntax- Rename &lt;old table&gt;to &lt;now_table&gt;;
+Example- Rename employee to worker;
+
+TRUNCATING TABLES :
+Syntax -Truncate table&lt;table name &gt;;
+Example -Truncate table employee;
+
+
+
+DML
+
+insert into employee 
+(employeeid , fname, lname,department,phonenumber)VALUES
+(101 , 'swanik','gudekar','iot',92123456);
+insert into employee
+(employeeid , fname, lname, department, phonenumber)
+values
+(101, 'om','kambli', 'iot',932453493)
+
+
+update employee
+set department = 'cse_iot'
+where fname - 'swanik'
+
