@@ -36,3 +36,6 @@ update employee
 set department = 'cse_iot'
 where fname - 'swanik'
 
+update employee
+set employeeid = 102
+where fname = 'om'
