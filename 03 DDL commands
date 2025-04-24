@@ -39,3 +39,46 @@ where fname - 'swanik'
 update employee
 set employeeid = 102
 where fname = 'om'
+
+
+view 
+create view employee_id AS
+select employeeid , fname , department 
+from employee
+where department = 'iot'
+
+SELECT * from employee_id
+
+
+trigger 
+
+
+natural join 
+CREATE TABLE department (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
+
+CREATE TABLE employee (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES department(dept_id)
+);
+
+-- Insert into department
+INSERT INTO department (dept_id, dept_name) VALUES
+(10, 'HR'),
+(20, 'IT'),
+(30, 'Finance');
+
+-- Insert into employee
+INSERT INTO employee (emp_id, name, dept_id) VALUES
+(1, 'Alice', 10),
+(2, 'Bob', 20),
+(3, 'Carol', 20),
+(4, 'David', 30);
+
+SELECT * 
+FROM employee
+NATURAL JOIN department;
